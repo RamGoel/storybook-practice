@@ -12,14 +12,18 @@ export const ButtonStyleMapper:any = {
 export const ButtonSizeMapper = {
   small: {
     textType: "caption",
-    weight: "semibold",
+    className:'py-[10px] px-[16px]'
   },
   medium: {
-    textType: "paragraph",
-    weight: "semibold",
+    textType: "caption",
+    className:'py-[12px] px-[16px]'
   },
   large: {
-    textType: "subheading1",
-    weight: "semibold",
+    textType: "paragraph",
+    className:'py-[16px] px-[16px]'
+  },
+  xlarge: {
+    textType: "paragraph",
+    className:'py-[20px] px-[16px]'
   },
 };
