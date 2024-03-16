@@ -1,14 +1,12 @@
-import { COLORS } from "../../constants/colors";
-
-export const ButtonStyleMapper = {
-  primary: `bg-[${COLORS.primary}] text-white`,
-  secondary: `bg-[${COLORS.secondary}] text-white`,
-  outline: `bg-[${COLORS.white}] text-[${COLORS.border}] border-[2px] border-[${COLORS.border}]`,
-  "outline-filled": `bg-[${COLORS.opaque}] text-[${COLORS.border}] border-[2px] border-[${COLORS.border}]`,
-  gradient: `text-[${COLORS.white}]`,
-  success: `bg-[${COLORS.success}] text-[${COLORS.white}]`,
-  warning: `bg-[${COLORS.warning}] text-[${COLORS.white}]`,
-  error: `bg-[${COLORS.error}] text-[${COLORS.white}]`,
+export const ButtonStyleMapper:any = {
+  primary: `bg-primary text-white`,
+  secondary: `bg-secondary text-white`,
+  outline: `bg-white text-border border-[2px] border-border`,
+  "outline-filled": `bg-opaque text-border border-[2px] border-border`,
+  gradient: `text-white`,
+  success: `bg-success text-white`,
+  warning: `bg-warning text-white`,
+  error: `bg-error text-white`,
 };
 
 export const ButtonSizeMapper = {

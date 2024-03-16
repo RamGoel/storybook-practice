@@ -1,14 +1,9 @@
 import React from 'react';
 import { ButtonStyleMapper } from './Button.constants';
 import Text from '../Text/Text';
+import { ButtonProps } from './Button.types';
+import clsx from 'clsx';
 
-interface ButtonProps {
-  type?: 'primary' | 'secondary' | 'outline' | 'outline-filled' | 'gradient' | 'success' |'warning'|'error';
-  size?: 'small' | 'medium' | 'large';
-  label: string;
-  icon?: any;
-  onClick?: () => void;
-}
 
 export const Button = ({
   type = 'primary',
@@ -24,10 +19,10 @@ export const Button = ({
       style={{
         background: type === 'gradient' ? 'linear-gradient(225deg, #2DCCFD 9.35%, #AD20E2 88.41%)' : ''
       }}
-      className={`${ButtonStyleMapper[type]} font-custom px-[24px] py-[20px] rounded-[4px] gap-[10px]`}
+      className={clsx('font-custom px-[24px] py-[20px] rounded-[4px] gap-[10px]', ButtonStyleMapper[type])}
       {...props}
     >
-      <Text text={label} type='caption' weight={'semibold'} />
+      <Text text={label} type='caption' weight='semibold' />
     </button>
   );
 };
